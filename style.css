@@ -2,14 +2,16 @@
 
 :root {
     /* BG COLORES */
-    --bg: #02050e; 
-    --background: #050100; 
+    --bg: #C18FCF; 
+    --background: #825090; 
     --rose: #F80494; 
     --roseb: #F058B2;
     --grey: #625A5F;  
     
+    
     /* TEXT COLORES  */
     --text-white: #f3f4f6;
+    --text-w: #EED8F5; 
     --text-grey: #8A8585;   
     --text-black: #050100; 
     --text-rose: #F80494; 
@@ -26,14 +28,14 @@
 }
 
 header {
-    background: var(--bg);
+    background: var(--bg) ;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 65px;
     padding: 0px 30px;
-    position: fixed;
+    position: fixed; /*para poder dejarlo fijo y scrolear */
     top: 0;
 
 }
@@ -51,6 +53,92 @@ header {
 }
 
 .navbar-list a {
-    color: var(--text-white);
+    color: black;
     font-size: 15px;
+}
+
+main {
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+}
+
+#hero {
+    margin-top: 65px;
+    padding: 70px 0;
+    max-width: 1200px; /*recomendacion para que no estire mas de 1200px*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.hero-info h1 {
+    font-size: 35px;
+    width: 80%;
+    min-width: 500px;
+    color: var(--text-w);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.hero-info p {
+    width: 70%;
+    color: var(--text-w hite);
+    font-weight: 200;
+    text-align: center;
+}
+
+.button {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-info a 
+{
+    width: 120px;
+    padding: 8px 0px;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.primary-bt {
+    color: var(--text-w);
+    background-color: var(--bg);
+}
+
+.secondary-bt {
+    color: var(--bg);
+    background-color: var(--text-w);
+}
+
+.hero-card {
+    width: 350px;
+    background: var(--bg);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+}
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 750px;
+    text-align: center;
+    padding: 30 px 0 px;
+    font-weight: 300px;
 }
