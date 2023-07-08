@@ -145,7 +145,7 @@ main {
 }
 
 #info {
-    padding: 70px 0px;
+    padding: 70px 20px;
     max-width: 1200px;
     display: flex;
     justify-content: center;
@@ -155,10 +155,11 @@ main {
 
 }
 
-#info h2 {
+.info h2 {
     font-size: 32px;
     font-weight: 600;
 }
+
 
 
 .info-cards-container {
@@ -247,6 +248,7 @@ footer {
 }
 
 .navbar i {
+    padding: 10%;
     font-size: 36px;
     display: none;
 }
