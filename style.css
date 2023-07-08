@@ -2,22 +2,22 @@
 
 :root {
     /* BG COLORES */
-    --bg: #C18FCF; 
-    --background: #825090; 
-    --rose: #F80494; 
+    --bg: #C18FCF;
+    --background: #825090;
+    --rose: #F80494;
     --roseb: #F058B2;
-    --grey: #625A5F;  
-    
-    
+    --grey: #625A5F;
+    --violet: #6B307C;
+
     /* TEXT COLORES  */
     --text-white: #f3f4f6;
-    --text-w: #EED8F5; 
-    --text-grey: #8A8585;   
-    --text-black: #050100; 
-    --text-rose: #F80494; 
+    --text-w: #EED8F5;
+    --text-grey: #8A8585;
+    --text-black: #050100;
+    --text-rose: #F80494;
     --text-yellow: #E0F31D;
 }
- 
+
 * {
     margin: 0;
     padding: 0;
@@ -37,6 +37,7 @@ header {
     padding: 0px 30px;
     position: fixed; /*para poder dejarlo fijo y scrolear */
     top: 0;
+    z-index: 1;
 
 }
 
@@ -90,13 +91,13 @@ main {
     color: var(--text-w);
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .hero-info p {
-    width: 70%;
+    max-width: 350px;
     color: var(--text-w hite);
-    font-weight: 200;
+    font-size: 14px;
     text-align: center;
 }
 
@@ -105,7 +106,7 @@ main {
     gap: 15px;
 }
 
-.hero-info a 
+.hero-info a
 {
     width: 120px;
     padding: 8px 0px;
@@ -141,4 +142,196 @@ main {
     text-align: center;
     padding: 30 px 0 px;
     font-weight: 300px;
+}
+
+#info {
+    padding: 70px 0px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+#info h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+
+.info-cards-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.info-card {
+    width: 280px;
+    height: 270px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--violet);
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.info-card img {
+    width: 30px;
+}
+
+.info-card h3 {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--text-black); 
+}
+
+.info-card p {
+    font-size: 14px;
+    font-weight: 300;
+    
+}
+
+#contact {
+    padding: 50px 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color:#EED8F5;
+    gap: 10px;
+    
+}
+
+.black-bg{
+    background-color: var(--violet);
+}
+.info-contact 
+{
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.info-contact h4 {
+    font-weight: 200;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.container a {
+    color: var(--text-black);
+}
+
+footer {
+    color: var(--text-black);
+    width: 100%;
+    text-align: center;
+    padding: 30px 0px;
+    font-size: 20px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar i {
+    font-size: 36px;
+    display: none;
+}
+
+#toggle-menu {
+    display: none;
+}
+
+@media (max-width:992px) {
+    .hero-info {
+        text-align: center;
+        width: 90%;
+        align-items: center;
+    }
+
+    .hero-info h1 {
+        display: block;
+        width: 100%;
+    }
+
+    .hero-info p {
+        max-width: 80%;
+        font-size: 16px;
+
+    }
+    .button {
+        justify-content: center;
+    }
+    .hero-card {
+        display: none;
+    }
+    #about {
+        font-size: 14px;
+    }
+
+    #contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-contact {
+        gap: 20px;
+    }
+
+    .info-contact h4 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar ul {
+        background-color: white;
+        width: 100%;
+        height: calc(100vh - 65px);
+        position: absolute;
+        top: 65px;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(200%);
+        transition: all 0.4s ease-out;
+    }
+    .navbar i {
+        display: block;
+    }
+
+    #toggle-menu:checked ~ .navbar-list {
+        transform: translateX(0%);
+        transition: all 0.4s ease-in;
+
+    }
+
+    .hero-info p {
+        max-width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+        gap:50px;
+    }
+    
+    inframe {
+        height: 300px;
+        width: 100%;
+    }
 }
