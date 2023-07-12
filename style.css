@@ -28,12 +28,12 @@
 }
 
 header {
-    background: var(--bg) ;
+    background: linear-gradient(to top, #E3C1EE, var(--bg));
+    height: 65px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 65px;
+    align-items: center;    
     padding: 0px 30px;
     position: fixed; /*para poder dejarlo fijo y scrolear */
     top: 0;
@@ -56,6 +56,19 @@ header {
 .navbar-list a {
     color: black;
     font-size: 15px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar i {
+    font-size: 36px;
+    display: none;
+}
+
+#toggle-menu {
+    display: none;
 }
 
 main {
@@ -88,9 +101,12 @@ main {
     font-size: 35px;
     width: 80%;
     min-width: 500px;
-    color: var(--text-w);
     display: flex;
     flex-direction: column;
+    background: linear-gradient(to bottom, #281B2C, #C10EBB);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 
 }
 
@@ -243,19 +259,16 @@ footer {
     font-size: 20px;
 }
 
-.navbar {
-    display: flex;
-}
 
-.navbar i {
-    padding: 10%;
-    font-size: 36px;
-    display: none;
-}
 
-#toggle-menu {
-    display: none;
-}
+
+
+
+
+
+
+
+
 
 @media (max-width:992px) {
     .hero-info {
